@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reserva — Alexandre Turismo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="logo.jpeg" alt="Alexandre Turismo - logomarca" class="logo">
+        <span class="brand-name">Alexandre Turismo</span>
+      </a>
+      <nav class="main-nav" role="navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+          <li><a href="galeria.html" data-i18n="nav.gallery">Galeria</a></li>
+          <li><a href="reserva.html" data-i18n="nav.reserve">Reserva</a></li>
+        </ul>
+      </nav>
+      <div class="controls">
+        <select id="langSelectReserve" aria-label="Selecione idioma"></select>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 data-i18n="reserve.title">Fazer Reserva</h1>
+
+    <section class="reservation-panel">
+      <div id="routeSummary" class="route-summary">
+        <!-- preenchido pelo script -->
+      </div>
+
+      <form id="reservationForm" class="reservation-form" aria-label="Formulário de reserva">
+        <label for="selectedRoute" data-i18n="reserve.routeLabel">Rota</label>
+        <input id="selectedRoute" name="route" readonly>
+
+        <label for="date" data-i18n="reserve.date">Data</label>
+        <input id="date" name="date" type="date" required>
+
+        <label for="time" data-i18n="reserve.time">Horário</label>
+        <input id="time" name="time" type="time" required>
+
+        <label for="qty" data-i18n="reserve.qty">Quantidade de pessoas</label>
+        <input id="qty" name="qty" type="number" min="1" value="2" required>
+
+        <label for="names" data-i18n="reserve.names">Nome(s)</label>
+        <input id="names" name="names" type="text" placeholder="" required>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" data-i18n="reserve.submit">Confirmar e Enviar WhatsApp</button>
+          <a class="btn btn-secondary" href="galeria.html" data-i18n="reserve.back">Voltar para Galeria</a>
+        </div>
+      </form>
+
+      <div id="confirmation" class="confirmation" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <a id="floatingWhatsApp3" class="floating-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="white" d="M..."/></svg>
+    <span class="wa-text">WhatsApp</span>
+  </a>
+
+  <footer class="site-footer container">
+    <p>&copy; <span id="year3"></span> Alexandre Turismo — <span data-i18n="footer.rights">Todos os direitos reservados</span></p>
+  </footer>
+</body>
+</html>

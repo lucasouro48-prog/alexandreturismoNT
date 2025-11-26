@@ -1,0 +1,75 @@
+:root{
+  --blue:#0a2f4d; /* azul marinho */
+  --orange:#ff7a18;
+  --green:#2aa876;
+  --light:#f8f9fb;
+  --muted:#6b7785;
+  --max-width:1100px;
+  --radius:12px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--light);color:#0b2130}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+
+.site-header{
+  position:fixed;top:0;left:0;right:0;background:linear-gradient(90deg,rgba(10,47,77,.98),rgba(10,47,77,.95));color:white;z-index:90;
+  box-shadow:0 2px 8px rgba(2,12,27,.15);
+}
+.header-inner{display:flex;align-items:center;gap:1rem;justify-content:space-between;padding:.6rem 1rem}
+.brand{display:flex;align-items:center;gap:.8rem;text-decoration:none;color:white}
+.logo{height:48px;width:auto;border-radius:8px}
+.brand-name{font-weight:700;font-size:1.1rem}
+.main-nav ul{display:flex;gap:0.6rem;list-style:none;margin:0;padding:0}
+.main-nav a{display:inline-block;padding:.45rem .7rem;border-radius:8px;color:white;text-decoration:none;font-weight:600}
+.main-nav a:hover{background:rgba(255,255,255,0.06)}
+
+.controls select{background:transparent;color:white;border:1px solid rgba(255,255,255,.12);padding:.4rem;border-radius:6px}
+
+main{padding-top:92px}
+
+.hero{
+  background:linear-gradient(180deg,var(--light),white);
+  padding:3rem 0 2rem;
+  display:flex;align-items:center;gap:2rem;
+  border-bottom:8px solid var(--orange);
+}
+.hero-content{flex:1}
+.hero h1{font-size:2rem;color:var(--blue);margin:0 0 .6rem}
+.hero p{color:var(--muted);margin:0 0 1rem}
+.btn{display:inline-block;padding:.7rem 1rem;border-radius:10px;text-decoration:none;font-weight:700}
+.btn-primary{background:var(--blue);color:white}
+.btn-secondary{background:transparent;border:2px solid var(--blue);color:var(--blue)}
+
+.highlights{display:flex;gap:1rem;margin:2rem 0}
+.card{background:white;padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(12,30,40,.06);flex:1}
+.preview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+
+.routes-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem;margin:1rem 0}
+.route-card{background:white;border-radius:12px;padding:0.6rem;box-shadow:0 8px 24px rgba(10,30,45,.06)}
+.route-card .thumbs{display:flex;gap:.4rem;margin-top:.6rem}
+.route-card img{width:100%;max-height:180px;object-fit:cover;border-radius:8px}
+.route-grid-img{width:calc(20% - .32rem);height:70px;object-fit:cover;border-radius:6px}
+
+.reservation-panel{display:flex;flex-direction:column;gap:1rem}
+.reservation-form{background:white;padding:1rem;border-radius:12px;box-shadow:0 8px 22px rgba(8,22,34,.06)}
+.reservation-form label{display:block;margin-top:.6rem;color:var(--muted);font-weight:600}
+.reservation-form input{width:100%;padding:.6rem;border:1px solid #e6edf0;border-radius:8px;margin-top:.3rem}
+.form-actions{display:flex;gap:1rem;margin-top:1rem}
+
+.site-footer{padding:1.4rem 0;text-align:center;color:var(--muted);margin-top:3rem}
+
+.floating-whatsapp{
+  position:fixed;right:18px;bottom:18px;background:linear-gradient(90deg,var(--green),#25d366);color:white;padding:.6rem .9rem;border-radius:999px;display:flex;align-items:center;gap:.6rem;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,.15);z-index:1000
+}
+.floating-whatsapp svg{width:20px;height:20px}
+.wa-text{font-weight:700}
+
+@media(max-width:760px){
+  .main-nav{display:none}
+  .hero{padding:2rem 1rem;flex-direction:column}
+  .brand-name{display:none}
+  .logo{height:44px}
+  .routes-list{grid-template-columns:1fr}
+  .preview-grid{grid-template-columns:1fr}
+}

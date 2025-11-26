@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Alexandre Turismo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="C:\Users\Cinthia7\OneDrive\Desktop\turismo\logo.jpeg" alt="Alexandre Turismo - " class="logo">
+        <span class="brand-name">Alexandre Turismo</span>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Main menu">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+          <li><a href="galeria.html" data-i18n="nav.gallery">Galeria</a></li>
+          <li><a href="reserva.html" data-i18n="nav.reserve">Reserva</a></li>
+        </ul>
+      </nav>
+
+      <div class="controls">
+        <select id="langSelect" aria-label="Selecione idioma"></select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content container">
+        <h1 data-i18n="hero.title">Viva experiências únicas com Alexandre Turismo</h1>
+        <p data-i18n="hero.subtitle">Passeios personalizados, guias experientes e horários flexíveis.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="galeria.html" data-i18n="hero.cta">Ver passeios</a>
+          <a class="btn btn-secondary" id="whatsapp-cta" href="#" target="_blank" rel="noopener" data-i18n="hero.whatsapp">Reservar via WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <!-- decoração -->
+      </div>
+    </section>
+
+    <section class="highlights container">
+      <article class="card">
+        <h3 data-i18n="highlights.expert">Guias experientes</h3>
+        <p data-i18n="highlights.personalized">Roteiros personalizados para todos os gostos.</p>
+      </article>
+      <article class="card">
+        <h3 data-i18n="highlights.safe">Segurança</h3>
+        <p data-i18n="highlights.flexible">Transporte seguro e horários flexíveis.</p>
+      </article>
+      <article class="card">
+        <h3 data-i18n="highlights.support">Suporte</h3>
+        <p data-i18n="highlights.supportText">Atendimento via WhatsApp e e-mail.</p>
+      </article>
+    </section>
+
+    <section class="preview container">
+      <h2 data-i18n="preview.title">Passeios em destaque</h2>
+      <div class="preview-grid" id="previewGrid">
+        <!-- Cards das rotas (gerados pelo script) -->
+      </div>
+    </section>
+  </main>
+
+  <a id="floatingWhatsApp" class="floating-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="white" d="M..."/></svg>
+    <span class="wa-text">WhatsApp</span>
+  </a>
+
+  <footer class="site-footer container">
+    <p>&copy; <span id="year"></span> Alexandre Turismo — <span data-i18n="footer.rights">Todos os direitos reservados</span></p>
+  </footer>
+</body>
+</html>
