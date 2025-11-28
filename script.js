@@ -2,7 +2,7 @@
    Tradução, geração dinâmica de rotas, transferência galeria->reserva e WhatsApp
 */
 
-const WHATSAPP_NUMBER = "5584991694313"; // 55 + DDD 84 + telefone 991694313
+const WHATSAPP_NUMBER = "5584988015699"; // 55 + DDD 84 + telefone 988015699
 
 /* --- Dados das rotas (cada rota tem pelo menos 5 imagens e textos para tradução) --- */
 const routes = [
